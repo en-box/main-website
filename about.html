@@ -1,0 +1,95 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Ethereum Blockchain Visualization</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    :root {
+      --bg-dark: #202020;
+      --bg-darker: #101010;
+      --accent: #00F5C3;
+      --text-light: #CCCCCC;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at center, var(--bg-dark), var(--bg-darker));
+      color: var(--text-light);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-container {
+      max-width: 600px;
+      background: var(--bg-darker);
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      padding: 24px;
+      text-align: left;
+    }
+    .about-container h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .about-container p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    nav {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(32, 32, 32, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    @media (max-width: 600px) {
+      .about-container {
+        width: 90%;
+        padding: 16px;
+      }
+      nav {
+        bottom: 10px;
+        padding: 6px 10px;
+        gap: 10px;
+      }
+      nav a {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="about-container">
+  <h1>About This Site</h1>
+  <p>This interactive visualization provides a live view of the Ethereum blockchain, showcasing recent blocks and network activity in a sleek, modern interface. It leverages D3.js for force-based layout and D3 transitions to animate new block rotations.</p>
+  <p>Designed with a minimalistic, dark theme and neon‑teal accents, this site demonstrates web3.0 design principles—decentralized data fetching via public RPC endpoints, real-time interactivity, and responsive layouts.</p>
+</div>
+<nav>
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</body>
+</html>
